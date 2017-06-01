@@ -1,18 +1,28 @@
 <div class="main">
 	<h1>Base Converter</h1>
 
-	<form [formGroup] = "form">
+	<form [formGroup]="myForm">
+
 		<div class="form-group">
-			<input type="text" name="decimal" placeholder="Decial Number" formControlName='decimal'>
+			<input type="text" name="decimal" 
+			(ngModelChange) = "decChange(oldvalue, newvalue = $event)"
+			placeholder="Decial Number" 
+			formControlName="decimal">
+		</div>
+		<div class="form-group"> 		<input type="text" name="binary" 
+			placeholder="Binary Number" 
+			formControlName="binary">
 		</div>
 		<div class="form-group">
-			<input type="text" name="binary" placeholder="Binary Number" formControlName='binary'>
+			<input type="text" name="octal" 
+			placeholder="Octal Number" 
+			formControlName="octal">
 		</div>
 		<div class="form-group">
-			<input type="text" name="octal" placeholder="Octal Number" formControlName='octal'>
+			<input type="text" name="hexa" 
+			placeholder="Hexa Number" 
+			formControlName="hexa">
 		</div>
-		<div class="form-group">
-			<input type="text" name="hexa" placeholder="Hexa Number" formControlName='hexa'>
-		</div>
+		
 	</form>
 </div>

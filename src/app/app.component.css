@@ -2,13 +2,14 @@
 	background: #607D8B;
 	width: 30%;
 	border: 2px solid #d7d7d7;
-	margin: 20px auto;
+	margin: 5% auto;
 	padding-bottom: 10px;
 }
 h1 {
 	margin: 0;
 	padding: 20px 0;
 	color: #f2f2f2;
+	font-size: 40px;
 	text-align: center;
 	font-family: sans-serif;
 }
@@ -19,5 +20,8 @@ h1 {
 }
 input[type='text']{
 	width: 95%;
-	padding: 5px;
+    padding: 8px;
+    color: #686868;
+    font-size: 16px;
+    background: #CFD8DC;
 }

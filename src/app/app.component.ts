@@ -21,8 +21,14 @@ export class AppComponent {
 
 	// listen for change on the decimal fild
 	decChange(oldVal, newVal){
-		this.myForm.patchValue({binary: parseInt(newVal, 10).toString(2)});
-		this.myForm.patchValue({octal: parseInt(newVal, 10).toString(8)});
-		this.myForm.patchValue({hexa: parseInt(newVal, 10).toString(16).toUpperCase()});
+		if (newVal != "") {
+			this.myForm.patchValue({binary: parseInt(newVal, 10).toString(2)});
+			this.myForm.patchValue({octal: parseInt(newVal, 10).toString(8)});
+			this.myForm.patchValue({hexa: parseInt(newVal, 10).toString(16).toUpperCase()});
+		}else{
+			this.myForm.patchValue({binary: ""});
+			this.myForm.patchValue({octal: ""});
+			this.myForm.patchValue({hexa: ""});
+		}
 	}
 }

@@ -48,4 +48,17 @@ export class AppComponent {
 			this.bin = 0;
 		}
 	}
+
+	// // listening to change on the octal fild
+	octChange(oldVal, newVal){
+		this.oct = this.oct + 1;
+		if (this.oct == 1) {
+			if (newVal != "") {
+				this.myForm.patchValue({decimal: parseInt(newVal, 8).toString(10)});
+			}else{
+				this.myForm.patchValue({decimal: ""});
+			}
+			this.oct = 0;
+		}
+	}
 }

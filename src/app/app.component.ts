@@ -19,6 +19,7 @@ export class AppComponent {
 		});
 	}
 
+	// initialize the count change
 	bin = 0;
 	oct = 0;
 	hex = 0;
@@ -36,7 +37,7 @@ export class AppComponent {
 		}
 	}
 
-	// // listening to change on the binary fild
+	// listening to change on the binary fild
 	binChange(oldVal, newVal){
 		this.bin = this.bin + 1;
 		if (this.bin == 1) {
@@ -49,7 +50,7 @@ export class AppComponent {
 		}
 	}
 
-	// // listening to change on the octal fild
+	// listening to change on the octal fild
 	octChange(oldVal, newVal){
 		this.oct = this.oct + 1;
 		if (this.oct == 1) {
@@ -59,6 +60,19 @@ export class AppComponent {
 				this.myForm.patchValue({decimal: ""});
 			}
 			this.oct = 0;
+		}
+	}
+
+	// listening to change on the octal fild
+	hexaChange(oldVal, newVal){
+		this.hex = this.hex + 1;
+		if (this.hex == 1) {
+			if (newVal != "") {
+				this.myForm.patchValue({decimal: parseInt(newVal, 16).toString(10)});
+			}else{
+				this.myForm.patchValue({decimal: ""});
+			}
+			this.hex = 0;
 		}
 	}
 }

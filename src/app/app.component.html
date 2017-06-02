@@ -22,7 +22,8 @@
 			formControlName="octal">
 		</div>
 		<div class="form-group">
-			<input type="text" name="hexa" 
+			<input type="text" name="hexa"
+			(ngModelChange) = "hexaChange (oldvalue, newvalue = $event)" 
 			placeholder="Hexa Number" 
 			formControlName="hexa">
 		</div>
